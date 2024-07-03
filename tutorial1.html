@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Make a LEGAL 12GB RAM, 128GB Disk Minecraft Server on Google Colab (FREE)</title>
+    <link rel="stylesheet" href="tutorial1.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="SKULL'sROCK Logo">
+            <h1>SKULL'sROCK</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h1 style="text-align: left;">How to Make a LEGAL 12GB RAM, 128GB Disk Minecraft Server on Google Colab (FREE)</h1><br><br>
+
+        <div class="step">
+            <h2>Step 1: Setting Up Google Colab Environment</h2>
+            <p>Access Google Colab and install necessary packages:</p>
+            <div class="code">
+                <pre><code>!apt-get install openjdk-8-jdk-headless -qq &gt; /dev/null
+!curl -sL https://deb.nodesource.com/setup_14.x | bash -
+!apt-get install -y nodejs
+!npm install -g localtunnel
+!pip install mcstatus</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 2: Linking Google Drive</h2>
+            <p>Mount your Google Drive to Google Colab:</p>
+            <div class="code">
+                <pre><code>from google.colab import drive
+drive.mount('/content/drive')</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 3: Downloading and Setting Up Minecraft Server</h2>
+            <p>Download and start the Minecraft server:</p>
+            <div class="code">
+                <pre><code>!java -Xmx12G -Xms12G -jar /content/drive/MyDrive/Minecraft/server.jar nogui</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 4: Keeping Server Running 24/7</h2>
+            <p>Prevent Colab from disconnecting to keep the server running:</p>
+            <ul>
+                <li>Use an auto-refresh extension or interact with the notebook periodically.</li>
+            </ul>
+        </div>
+
+        <div class="resources">
+            <h2>Additional Resources</h2>
+            <p>Download the notebook:</p>
+            <a href="https://www.mediafire.com/file/ml3o0hw3lounc01/MineServerColab.ipynb/file" class="button" target="_blank">Notebook</a>
+            <a href="https://colab.research.google.com" class="button" target="_blank">Google Colab</a>
+            <a href="https://ngrok.com" class="button" target="_blank">Ngrock</a>
+            <a href="https://drive.google.com/drive/u/0/my-drive" class="button" target="_blank">Google Drive</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 SKULL'sROCK. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials - SKULL'sROCK</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo.jpg">
+  <link rel="stylesheet" href="tutorial2.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="SKULL'sROCK Logo">
+      <h1>SKULL'sROCK</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tutorials.html" class="active">Tutorials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>How to Make a Minecraft BungeeCord Server on Hosting</h1>
+    <p>Follow this comprehensive guide to set up a Minecraft BungeeCord server on a hosting platform. This setup will enable you to manage multiple Minecraft servers under one proxy, allowing seamless player transfers. Below are the detailed steps and resources.</p>
+
+    <div class="step">
+        <h2>Step 1: Choose a Hosting Provider</h2>
+        <p>First, you need to select a hosting provider that supports Minecraft servers and BungeeCord. Some popular choices include:</p>
+        <ul>
+            <li>Apex Hosting</li>
+            <li>HostHorde</li>
+            <li>Shockbyte</li>
+            <li>MCProHosting</li>
+        </ul>
+        <p>Once you have chosen a provider, sign up for an account and purchase a plan that meets your server requirements.</p>
+    </div>
+
+    <div class="step">
+        <h2>Step 2: Install BungeeCord</h2>
+        <p>After setting up your hosting account, install BungeeCord on your server. Most hosting providers offer a one-click installation process for BungeeCord. If not, you can manually upload the BungeeCord jar file.</p>
+        <div class="code">
+            <pre><code>wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar -P /your/server/directory/
+echo 'eula=true' > /your/server/directory/eula.txt
+java -Xmx1G -Xms1G -jar BungeeCord.jar</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Step 3: Configure BungeeCord</h2>
+        <p>Next, you need to configure the BungeeCord server by editing the <code>config.yml</code> file located in your server directory. Add the details of the servers you want to link under BungeeCord and adjust other settings as necessary.</p>
+        <div class="code">
+            <pre><code>servers:
+  lobby:
+    motd: '&1Just another BungeeCord - Forced Host'
+    address: localhost:25565
+    restricted: false
+  faction:
+    motd: '&1Just another BungeeCord - Forced Host'
+    address: localhost:25566
+    restricted: false
+  skyblock:
+    motd: '&1Just another BungeeCord - Forced Host'
+    address: localhost:25567
+    restricted: false
+listeners:
+  - query_port: 25577
+    motd: '&1Another Bungee server'
+    tab_list: GLOBAL_PING
+    query_enabled: false
+    proxy_protocol: false
+    forced_hosts:
+      pvp.md-5.net: pvp
+    bind_local_address: true
+    host: 0.0.0.0:25577
+    max_players: 1
+    tab_size: 60
+    force_default_server: false
+ip_forward: true
+online_mode: true</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Step 4: Start Your Servers</h2>
+        <p>Start your individual Minecraft servers that you linked in the BungeeCord configuration. Ensure each server has a unique port number and that the <code>server.properties</code> file is correctly set up.</p>
+    </div>
+
+    <div class="step">
+        <h2>Step 5: Test Your BungeeCord Setup</h2>
+        <p>Connect to your BungeeCord server using the IP and port configured in the <code>config.yml</code> file. Test switching between the different servers to ensure everything is working correctly.</p>
+    </div>
+
+    <div class="resources">
+        <h2>Additional Resources</h2>
+        <p>For further assistance and community support, join our Discord server:</p>
+        <a href="https://discord.gg/cmzKmNt85v" class="button" target="_blank">Join Discord</a>
+        <a href="https://dash.mc-servers.tech/portal" class="button" target="_blank">Hosting Link</a>
+        <a href="https://minecraftversion.net/downloads/paper/" class="button" target="_blank">Paper jar file</a>
+        <a href="https://ci.md-5.net/job/BungeeCord/" class="button" target="_blank">Bungee jar file</a>
+        <br>
+        <h4>Plugins:</h4>
+        <a href="https://www.spigotmc.org/resources/server-switcher.14979/" class="button" target="_blank">server switcher</a>
+        <a href="https://www.spigotmc.org/resources/viaversion.19254/" class="button" target="_blank">Via version</a>
+        <a href="https://www.spigotmc.org/resources/viabackwards.27448/" class="button" target="_blank">Via Backward</a>
+        <a href="https://hangar.papermc.io/ViaVersion/ViaRewind/versions" class="button" target="_blank">Via Forward</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 SKULL'sROCK. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: url('images/minecraft1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header nav ul li a.active {
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+  padding: 100px 0;
+  background-color: rgba(40, 40, 40, 0.8);
+  color: #fff;
+  flex: 1;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.circle-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo-container {
+      margin-bottom: 10px;
+  }
+
+  header nav ul {
+      width: 100%;
+      text-align: center;
+  }
+
+  header nav ul li {
+      display: block;
+      margin: 5px 0;
+  }
+
+  .contact h2 {
+      font-size: 2rem;
+  }
+
+  .contact p {
+      font-size: 1rem;
+  }
+
+  .contact-info {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-item {
+      margin: 10px 0;
+      flex-direction: column;
+  }
+
+  .circle-icon {
+      margin-bottom: 10px;
+  }
+}

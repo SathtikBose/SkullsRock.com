@@ -1,0 +1,216 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: scroll; 
+    background-color: #f0f0f0; 
+    background-image: url(gif/Minecraft\ Aesthetic.gif);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3; 
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header nav ul li a.active {
+    text-decoration: underline;
+}
+
+.tutorials {
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    flex: 1;
+}
+
+.tutorials h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.tutorials p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.tutorials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tutorial-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.tutorial-item iframe {
+    width: 50%; 
+    height: 315px; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.tutorial-info {
+    width: 45%; /* Adjust width of info section */
+    text-align: left;
+    padding-left: 20px;
+}
+
+.tutorial-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.tutorial-info h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tutorial-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+.gif-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.8;
+    pointer-events: none; /* Ensure the background doesn't interfere with interactions */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .tutorial-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tutorial-item iframe {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .tutorial-info {
+        width: 100%;
+        padding: 0;
+    }
+}
